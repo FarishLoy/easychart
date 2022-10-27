@@ -56,14 +56,16 @@ function App() {
     <div className="App">
       <header className="App-header">
       </header>
+      <h1>EasyChart</h1>
+      <h3>Drag and drop CSV File to visualise your data</h3>
       <FileUploader handleChange={handleChange} types={fileTypes} />
-      <p>X axis</p>
+      <p>Choose variable for X axis</p>
       {data?.columns.map((colName) => {
     return (
       <button onClick={() => setX(colName)}>{colName}</button>
     )
   })}
-    <p>Y axis</p>
+    <p>Choose variable for Y axis</p>
         {data?.columns.map((colName) => {
     return (
       <button onClick={() => setY(colName)}>{colName}</button>
